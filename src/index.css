@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #F1F5F2;
+    --text-base: #2D3436;
+    --primary: #2D6A4F;
+    --primary-dark: #1B4332;
+    --mint-light: #D8F3DC;
+    --mint-surface: #F7FCF8;
+    --mint-accent: #95D5B2;
+    --border-color: #E1E8E2;
+    --danger: #D63031;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #F1F5F2;
+    color: #2D3436;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.font-arabic {
+  font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif;
+  line-height: 2.1;
+  direction: rtl;
+}
+
+/* Custom crisp High-Density scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E8EFEA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B7C9BC;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8FA697;
+}
+
+/* Disable user text selection during exam */
+.exam-protection {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Watermark backdrop */
+.watermark-pattern {
+  pointer-events: none;
+  user-select: none;
+  z-index: 40;
+}
+

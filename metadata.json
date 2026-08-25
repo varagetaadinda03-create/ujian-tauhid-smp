@@ -1,0 +1,6 @@
+{
+  "name": "CBT SMP Para Sahabat - Ujian Tauhid",
+  "description": "Sistem Ujian Digital CBT modern, aman, dan terintegrasi untuk SMP Para Sahabat - Ujian Tauhid Kitab Tauhid Bab 1–5 dengan fitur keamanan, proctoring kamera, deteksi fokus, watermark, dan dashboard penilaian guru/admin.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
