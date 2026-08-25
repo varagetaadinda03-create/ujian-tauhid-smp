@@ -2,35 +2,72 @@
 
 @layer base {
   :root {
-    --bg-base: #F1F5F2;
-    --text-base: #2D3436;
-    --primary: #2D6A4F;
-    --primary-dark: #1B4332;
+    --bg-base: #F5F7F4;
+    --text-base: #1E2922;
+    --primary: #1F513B;
+    --primary-dark: #0F2E21;
+    --emerald-deep: #0A2117;
+    --emerald-gold: #C5A059;
+    --gold-subtle: #E8D8B0;
     --mint-light: #D8F3DC;
-    --mint-surface: #F7FCF8;
-    --mint-accent: #95D5B2;
-    --border-color: #E1E8E2;
-    --danger: #D63031;
+    --mint-surface: #F8FAF7;
+    --border-color: #E2E8E0;
+    --danger: #C0392B;
   }
 
   body {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #F1F5F2;
-    color: #2D3436;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #F5F7F4;
+    color: #1E2922;
     -webkit-font-smoothing: antialiased;
   }
 }
 
 .font-arabic {
   font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif;
-  line-height: 2.1;
+  line-height: 2.2;
   direction: rtl;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Islamic Geometric Motif Subtle Pattern */
+.bg-islamic-pattern {
+  background-color: #F5F7F4;
+  background-image: radial-gradient(rgba(31, 81, 59, 0.05) 1px, transparent 1px), radial-gradient(rgba(197, 160, 89, 0.06) 1px, #F5F7F4 1px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+.bg-emerald-gradient {
+  background: linear-gradient(135deg, #0A2117 0%, #133D2B 50%, #1F513B 100%);
+}
+
+.bg-emerald-card {
+  background: linear-gradient(145deg, #0D2B1E 0%, #164330 100%);
+}
+
+.border-gold-glow {
+  border-color: rgba(197, 160, 89, 0.35);
+  box-shadow: 0 0 15px -3px rgba(197, 160, 89, 0.12);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F9E7BA 0%, #D4AF37 50%, #B3862A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Custom crisp High-Density scrollbar */
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -38,12 +75,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B7C9BC;
+  background: #B4C6BA;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8FA697;
+  background: #8AAB94;
 }
 
 /* Disable user text selection during exam */
@@ -58,6 +95,7 @@
 /* Watermark backdrop */
 .watermark-pattern {
   pointer-events: none;
+  opacity: 0.045;
   user-select: none;
   z-index: 40;
 }

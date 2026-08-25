@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cbtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4332" />
+      <stop offset="100%" stop-color="#2D6A4F" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#cbtGrad)" />
+  
+  <!-- Outer decorative border ring -->
+  <rect x="24" y="24" width="464" height="464" rx="92" fill="none" stroke="#D8F3DC" stroke-width="4" stroke-opacity="0.3" stroke-dasharray="12 8" />
+
+  <!-- Central Shield Badge -->
+  <g filter="url(#shadow)">
+    <!-- Shield Outline -->
+    <path d="M 256,96 C 340,96 384,124 384,180 C 384,300 256,388 256,388 C 256,388 128,300 128,180 C 128,124 172,96 256,96 Z" fill="#081C15" stroke="url(#goldGrad)" stroke-width="8" />
+
+    <!-- Quran / Book Emblem -->
+    <path d="M 256,236 C 236,218 200,208 168,212 C 168,290 200,300 256,324 C 312,300 344,290 344,212 C 312,208 276,218 256,236 Z" fill="#2D6A4F" stroke="#D8F3DC" stroke-width="4" />
+    <path d="M 256,236 L 256,324" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" />
+
+    <!-- 8-point Islamic Star / Nur -->
+    <g transform="translate(256, 168) scale(0.9)">
+      <polygon points="0,-36 10,-10 36,0 10,10 0,36 -10,10 -36,0 -10,-10" fill="url(#goldGrad)" />
+      <circle cx="0" cy="0" r="10" fill="#1B4332" />
+    </g>
+  </g>
+
+  <!-- Typography: CBT -->
+  <text x="256" y="440" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="34" font-weight="900" fill="#D8F3DC" text-anchor="middle" letter-spacing="4">
+    CBT SAHABAT
+  </text>
+</svg>

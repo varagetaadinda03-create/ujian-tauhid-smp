@@ -1,0 +1,56 @@
+{
+  "name": "CBT SMP Para Sahabat - Ujian Tauhid",
+  "short_name": "CBT Sahabat",
+  "description": "Aplikasi Ujian Berbasis Komputer & Proctoring SMP Para Sahabat",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F1F5F2",
+  "theme_color": "#1B4332",
+  "lang": "id",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 256x256",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ruang Ujian Siswa",
+      "short_name": "Ujian",
+      "description": "Masuk langsung ke ruang ujian siswa",
+      "url": "/?mode=student",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Dashboard Guru / Pengawas",
+      "short_name": "Guru",
+      "description": "Buka panel kontrol guru dan proctoring",
+      "url": "/?mode=admin",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    }
+  ]
+}

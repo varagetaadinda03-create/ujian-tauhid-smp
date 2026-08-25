@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, KeyRound, User, Hash, School, AlertCircle, CheckCircle2, ShieldCheck, Sparkles, ArrowRight } from 'lucide-react';
+import { BookOpen, KeyRound, User, Hash, School, AlertCircle, CheckCircle2, ShieldCheck, Sparkles, ArrowRight, Smartphone } from 'lucide-react';
 import { ExamConfig, StudentSession } from '../../types';
 import { PRESET_STUDENTS } from '../../data/defaultData';
 
@@ -90,89 +90,108 @@ export const LoginView: React.FC<LoginViewProps> = ({
   };
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center p-3 sm:p-6 md:p-8 bg-[#F1F5F2]">
+    <div className="min-h-[calc(100vh-4.25rem)] flex items-center justify-center p-3 sm:p-6 md:p-8 bg-islamic-pattern">
       <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         
-        {/* Left Col: School & Exam Details Card */}
-        <div className="lg:col-span-5 bg-gradient-to-br from-[#1B4332] via-[#2D6A4F] to-[#1B4332] text-white rounded-2xl p-5 sm:p-7 shadow-md flex flex-col justify-between relative overflow-hidden border border-[#2D6A4F]">
-          {/* Background Subtle Accent */}
-          <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-emerald-500/10 blur-2xl pointer-events-none"></div>
-          <div className="absolute -bottom-12 -left-12 w-48 h-48 rounded-full bg-teal-400/10 blur-2xl pointer-events-none"></div>
+        {/* Left Col: School & Exam Details Card (Regal Emerald & Gold) */}
+        <div className="lg:col-span-5 bg-gradient-to-br from-[#091F15] via-[#123626] to-[#1C4A35] text-white rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden border border-[#C5A059]/30">
+          
+          {/* Subtle Islamic Geometric Corner Accent */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#C5A059]/20 via-transparent to-transparent pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#2D6A4F]/30 via-transparent to-transparent pointer-events-none"></div>
 
           <div>
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-11 h-11 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-[#95D5B2]">
-                <BookOpen className="w-5 h-5" />
+            <div className="flex items-center gap-3.5 mb-6 pb-4 border-b border-white/10">
+              <div className="w-12 h-12 rounded-xl bg-[#0A2117] border border-[#C5A059]/50 flex items-center justify-center text-[#F9E7BA] shadow-sm">
+                <BookOpen className="w-6 h-6 text-[#C5A059]" />
               </div>
               <div>
-                <h1 className="text-lg sm:text-xl font-black tracking-tight text-white">
+                <h1 className="font-cinzel text-base sm:text-lg font-bold tracking-wider text-white">
                   SMP PARA SAHABAT
                 </h1>
-                <p className="text-[11px] text-[#D8F3DC] font-medium">
-                  Sistem Ujian Digital – Aman, Modern, & Terpadu
+                <p className="text-[11px] text-[#E8D8B0] font-medium tracking-wide">
+                  Portal Ujian Digital & Standar Integritas
                 </p>
               </div>
             </div>
 
-            <div className="space-y-3.5 mb-6">
-              <div className="bg-white/10 border border-white/15 rounded-xl p-3.5 backdrop-blur-xs">
-                <div className="flex items-center gap-1.5 text-[11px] font-semibold text-[#95D5B2] mb-1">
-                  <Sparkles className="w-3.5 h-3.5" />
+            <div className="space-y-4 mb-6">
+              <div className="bg-black/30 border border-[#C5A059]/30 rounded-xl p-4 backdrop-blur-xs relative overflow-hidden">
+                <div className="absolute -top-3 -right-3 text-[50px] opacity-10 text-[#C5A059] font-arabic select-none pointer-events-none">
+                  توحيد
+                </div>
+                
+                <div className="flex items-center gap-1.5 text-[10px] font-bold text-[#E8D8B0] tracking-widest uppercase mb-1">
+                  <Sparkles className="w-3 h-3 text-[#C5A059]" />
                   MATA PELAJARAN
                 </div>
-                <div className="text-base sm:text-lg font-bold text-white">Tauhid</div>
-                <div className="text-xs text-[#D8F3DC] font-arabic mt-1" dir="rtl">
-                  كتاب التوحيد للشيخ محمد بن عبد الوهاب
+                <div className="text-lg sm:text-xl font-extrabold text-white font-cinzel tracking-wide">
+                  TAUHID
                 </div>
-                <div className="text-[11px] text-emerald-100/90 mt-1">
-                  Materi: Kitab Tauhid – Bab 1 sampai Bab 5
+                <div className="text-xs text-[#E8D8B0] font-arabic mt-1" dir="rtl">
+                  كتاب التوحيد الذي هو حق الله على العبيد
+                </div>
+                <div className="text-[11px] text-[#D8E6DC] mt-2 font-medium">
+                  Cakupan: Kitab Tauhid – Bab 1 sampai Bab 5
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-2.5">
-                <div className="bg-white/5 border border-white/10 rounded-lg p-2.5">
-                  <span className="text-[10px] text-[#D8F3DC] block">Pilihan Ganda</span>
-                  <span className="text-sm font-bold text-white">10 Soal</span>
-                  <span className="text-[9px] text-[#95D5B2] block mt-0.5">Teks Arab & Makna</span>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
+                  <span className="text-[10px] text-[#E8D8B0] uppercase font-bold tracking-wider block">Pilihan Ganda</span>
+                  <span className="text-base font-extrabold text-white">10 Soal</span>
+                  <span className="text-[9px] text-[#95D5B2] block mt-0.5 font-medium">Matan & Dalil</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-2.5">
-                  <span className="text-[10px] text-[#D8F3DC] block">Soal Esai</span>
-                  <span className="text-sm font-bold text-white">5 Soal</span>
-                  <span className="text-[9px] text-[#95D5B2] block mt-0.5">Penjelasan Konsep</span>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
+                  <span className="text-[10px] text-[#E8D8B0] uppercase font-bold tracking-wider block">Soal Esai</span>
+                  <span className="text-base font-extrabold text-white">5 Soal</span>
+                  <span className="text-[9px] text-[#95D5B2] block mt-0.5 font-medium">Analisis Konsep</span>
                 </div>
               </div>
 
-              <div className="bg-[#1B4332]/80 border border-[#95D5B2]/30 rounded-lg p-2.5 text-xs text-emerald-100 flex items-center justify-between">
-                <span className="text-[11px]">Alokasi Waktu Ujian:</span>
-                <span className="font-bold text-white bg-[#2D6A4F] px-2 py-0.5 rounded text-[11px]">
+              <div className="bg-[#0A2117]/80 border border-[#C5A059]/40 rounded-xl p-3 text-xs text-white flex items-center justify-between">
+                <span className="text-[11px] text-[#E8D8B0] font-medium">Alokasi Waktu Ujian:</span>
+                <span className="font-bold text-[#0F2E21] bg-gradient-to-r from-[#F9E7BA] to-[#D4AF37] px-2.5 py-0.5 rounded-lg text-xs shadow-xs">
                   {config.durationMinutes} Menit
                 </span>
               </div>
             </div>
           </div>
 
-          <div className="pt-3 border-t border-white/15 text-[11px] text-[#D8F3DC] flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-[#95D5B2] shrink-0" />
-            <span>Dilengkapi Proctoring & Deteksi Kecurangan Terpadu</span>
+          <div className="pt-4 border-t border-white/10 text-[11px] text-[#D8E6DC] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-[#C5A059] shrink-0" />
+              <span>Proctoring & Deteksi Integritas</span>
+            </div>
+            <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#F9E7BA] bg-white/10 px-2 py-0.5 rounded-md border border-[#C5A059]/30">
+              <Smartphone className="w-3 h-3 text-[#C5A059]" />
+              Support PWA App
+            </span>
           </div>
         </div>
 
-        {/* Right Col: Login Form */}
-        <div className="lg:col-span-7 bg-white rounded-2xl p-5 sm:p-7 shadow-sm border border-[#E1E8E2] flex flex-col justify-between">
+        {/* Right Col: Login Form (Clean Ivory Alabaster Card) */}
+        <div className="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-[#E2E8E0] flex flex-col justify-between relative">
           <div>
-            <div className="mb-5">
-              <h2 className="text-lg sm:text-xl font-black text-[#1B4332] tracking-tight">
-                Login Peserta Ujian
+            <div className="mb-5 pb-3 border-b border-[#E2E8E0]">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="w-2 h-2 rounded-full bg-[#C5A059]"></span>
+                <span className="text-[11px] font-bold uppercase tracking-widest text-[#7A5B18]">
+                  Portal Peserta Ujian
+                </span>
+              </div>
+              <h2 className="text-xl sm:text-2xl font-extrabold text-[#0F2E21] tracking-tight font-cinzel">
+                Masuk Ruang Ujian
               </h2>
-              <p className="text-xs text-[#55655B] mt-0.5">
-                Silakan lengkapi identitas dan masukkan token ujian untuk memulai.
+              <p className="text-xs text-[#556B5F] mt-0.5">
+                Lengkapi identitas Nama, NISN resmi, dan Token Ujian yang diberikan pengawas.
               </p>
             </div>
 
             {/* Quick preset chips for rapid testing */}
-            <div className="mb-5 bg-[#F7FCF8] border border-[#E1E8E2] rounded-xl p-3">
-              <span className="text-[10px] font-bold text-[#55655B] uppercase tracking-wider block mb-2">
-                Pilih Cepat Peserta (Demo / Pengujian):
+            <div className="mb-5 bg-[#F8FAF7] border border-[#DDE4DC] rounded-xl p-3.5">
+              <span className="text-[10px] font-bold text-[#556B5F] uppercase tracking-wider block mb-2">
+                Pilih Cepat Peserta (Data Siswa SMP Para Sahabat):
               </span>
               <div className="flex flex-wrap gap-1.5">
                 {PRESET_STUDENTS.map((st) => (
@@ -180,16 +199,18 @@ export const LoginView: React.FC<LoginViewProps> = ({
                     key={st.nis}
                     type="button"
                     onClick={() => handleSelectPreset(st)}
-                    className="text-xs px-2.5 py-1 rounded-md bg-white border border-[#E1E8E2] hover:border-[#2D6A4F] hover:bg-[#D8F3DC]/40 text-[#2D3436] font-medium transition-all shadow-2xs cursor-pointer"
+                    className="text-xs px-2.5 py-1.5 rounded-lg bg-white border border-[#DDE4DC] hover:border-[#C5A059] hover:bg-[#FDFBF7] text-[#1E2922] font-semibold transition-all shadow-2xs cursor-pointer flex items-center gap-1.5 group"
                   >
-                    {st.name.split(' ')[0]} ({st.className})
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#2D6A4F] group-hover:bg-[#C5A059]"></span>
+                    <span>{st.name.split(' ')[0]}</span>
+                    <span className="text-[10px] text-[#7A5B18] font-mono">({st.className})</span>
                   </button>
                 ))}
               </div>
             </div>
 
             {errorMsg && (
-              <div className="mb-5 p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs flex items-start gap-2.5">
+              <div className="mb-5 p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs flex items-start gap-2.5 animate-in fade-in duration-200">
                 <AlertCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold">Gagal Memulai Ujian</p>
@@ -198,14 +219,14 @@ export const LoginView: React.FC<LoginViewProps> = ({
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-3.5">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-[11px] font-bold text-[#2D3436] uppercase tracking-wider mb-1 flex items-center justify-between">
+                <label className="block text-[11px] font-bold text-[#1E2922] uppercase tracking-wider mb-1 flex items-center justify-between">
                   <span>Nama Lengkap Siswa <span className="text-rose-600 font-bold">*</span></span>
-                  <span className="text-[10px] text-[#55655B] font-normal lowercase">sesuai daftar hadir</span>
+                  <span className="text-[10px] text-[#556B5F] font-normal lowercase">sesuai kartu peserta</span>
                 </label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#55655B]">
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#556B5F]">
                     <User className="w-4 h-4" />
                   </div>
                   <input
@@ -215,18 +236,18 @@ export const LoginView: React.FC<LoginViewProps> = ({
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Contoh: Ahmad Fauzan Al-Ghifari"
-                    className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm bg-[#F7FCF8] border border-[#E1E8E2] rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2D6A4F] focus:border-[#2D6A4F] transition-all font-medium text-[#1B4332]"
+                    className="w-full pl-10 pr-3.5 py-2.5 text-xs sm:text-sm bg-[#F8FAF7] border border-[#DDE4DC] rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#C5A059] focus:border-[#C5A059] transition-all font-semibold text-[#0F2E21]"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-[11px] font-bold text-[#2D3436] uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] font-bold text-[#1E2922] uppercase tracking-wider mb-1">
                     NISN Siswa (10 Digit) <span className="text-rose-600 font-bold">*</span>
                   </label>
                   <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#55655B]">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#556B5F]">
                       <Hash className="w-4 h-4" />
                     </div>
                     <input
@@ -237,20 +258,20 @@ export const LoginView: React.FC<LoginViewProps> = ({
                       value={nisn}
                       onChange={(e) => setNisn(e.target.value.replace(/\D/g, ''))}
                       placeholder="Contoh: 0089271821"
-                      className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm bg-[#F7FCF8] border border-[#E1E8E2] rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2D6A4F] focus:border-[#2D6A4F] transition-all font-mono font-bold text-[#1B4332]"
+                      className="w-full pl-10 pr-3.5 py-2.5 text-xs sm:text-sm bg-[#F8FAF7] border border-[#DDE4DC] rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#C5A059] focus:border-[#C5A059] transition-all font-mono font-bold text-[#0F2E21]"
                     />
                   </div>
-                  <span className="text-[10px] text-[#55655B] mt-0.5 block">
+                  <span className="text-[10px] text-[#556B5F] mt-1 block">
                     Nomor Induk Siswa Nasional
                   </span>
                 </div>
 
                 <div>
-                  <label className="block text-[11px] font-bold text-[#2D3436] uppercase tracking-wider mb-1">
-                    NIS / No. Peserta (Opsional)
+                  <label className="block text-[11px] font-bold text-[#1E2922] uppercase tracking-wider mb-1">
+                    NIS / No. Peserta
                   </label>
                   <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#55655B]">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#556B5F]">
                       <Hash className="w-4 h-4" />
                     </div>
                     <input
@@ -259,29 +280,29 @@ export const LoginView: React.FC<LoginViewProps> = ({
                       value={nis}
                       onChange={(e) => setNis(e.target.value)}
                       placeholder="Contoh: 2025001"
-                      className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm bg-[#F7FCF8] border border-[#E1E8E2] rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2D6A4F] focus:border-[#2D6A4F] transition-all font-mono text-[#2D3436]"
+                      className="w-full pl-10 pr-3.5 py-2.5 text-xs sm:text-sm bg-[#F8FAF7] border border-[#DDE4DC] rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#C5A059] focus:border-[#C5A059] transition-all font-mono text-[#1E2922]"
                     />
                   </div>
-                  <span className="text-[10px] text-[#55655B] mt-0.5 block">
+                  <span className="text-[10px] text-[#556B5F] mt-1 block">
                     No. Absen / Induk Sekolah
                   </span>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-[11px] font-bold text-[#2D3436] uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] font-bold text-[#1E2922] uppercase tracking-wider mb-1">
                     Kelas / Rombel
                   </label>
                   <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#55655B]">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#556B5F]">
                       <School className="w-4 h-4" />
                     </div>
                     <select
                       id="select-class"
                       value={className}
                       onChange={(e) => setClassName(e.target.value)}
-                      className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm bg-[#F7FCF8] border border-[#E1E8E2] rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2D6A4F] focus:border-[#2D6A4F] transition-all cursor-pointer font-medium"
+                      className="w-full pl-10 pr-3.5 py-2.5 text-xs sm:text-sm bg-[#F8FAF7] border border-[#DDE4DC] rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#C5A059] focus:border-[#C5A059] transition-all cursor-pointer font-semibold text-[#0F2E21]"
                     >
                       <option value="Kelas 7A">Kelas 7A</option>
                       <option value="Kelas 7B">Kelas 7B</option>
@@ -295,15 +316,15 @@ export const LoginView: React.FC<LoginViewProps> = ({
 
                 <div>
                   <div className="flex items-center justify-between mb-1">
-                    <label className="block text-[11px] font-bold text-[#2D3436] uppercase tracking-wider">
+                    <label className="block text-[11px] font-bold text-[#1E2922] uppercase tracking-wider">
                       Token Ujian <span className="text-rose-600 font-bold">*</span>
                     </label>
-                    <span className="text-[10px] text-[#2D6A4F] font-bold bg-[#D8F3DC] px-1.5 py-0.5 rounded">
+                    <span className="text-[10px] text-[#7A5B18] font-bold bg-[#F4EBD9] border border-[#E0CF9B] px-1.5 py-0.5 rounded">
                       Aktif: {config.activeToken}
                     </span>
                   </div>
                   <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#55655B]">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#556B5F]">
                       <KeyRound className="w-4 h-4" />
                     </div>
                     <input
@@ -313,7 +334,7 @@ export const LoginView: React.FC<LoginViewProps> = ({
                       value={token}
                       onChange={(e) => setToken(e.target.value)}
                       placeholder="Masukkan Token"
-                      className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm bg-[#F7FCF8] border border-[#E1E8E2] rounded-lg focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2D6A4F] focus:border-[#2D6A4F] transition-all uppercase tracking-widest font-mono font-bold text-[#1B4332]"
+                      className="w-full pl-10 pr-3.5 py-2.5 text-xs sm:text-sm bg-[#F8FAF7] border border-[#DDE4DC] rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#C5A059] focus:border-[#C5A059] transition-all uppercase tracking-widest font-mono font-bold text-[#0F2E21]"
                     />
                   </div>
                 </div>
@@ -323,20 +344,20 @@ export const LoginView: React.FC<LoginViewProps> = ({
                 <button
                   id="btn-login-submit"
                   type="submit"
-                  className="w-full py-3 px-5 rounded-xl bg-[#2D6A4F] hover:bg-[#1B4332] active:scale-[0.99] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer"
+                  className="w-full py-3.5 px-5 rounded-xl bg-gradient-to-r from-[#0F2E21] via-[#194633] to-[#0F2E21] hover:from-[#194633] hover:to-[#1F513B] active:scale-[0.99] text-[#F9E7BA] font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all cursor-pointer border border-[#C5A059]/40"
                 >
-                  <span>Masuk Ruang Persiapan Ujian</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <span className="tracking-wide">Masuk Ruang Persiapan Ujian</span>
+                  <ArrowRight className="w-4 h-4 text-[#C5A059]" />
                 </button>
               </div>
             </form>
           </div>
 
-          <div className="mt-5 pt-3 border-t border-[#E1E8E2] flex items-center justify-between text-[11px] text-[#55655B]">
-            <span>SMP Para Sahabat CBT v2.4</span>
-            <span className="flex items-center gap-1 text-[#2D6A4F] font-semibold">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              Koneksi Server Siap
+          <div className="mt-6 pt-3 border-t border-[#E2E8E0] flex items-center justify-between text-[11px] text-[#556B5F]">
+            <span className="font-medium">SMP Para Sahabat CBT Digital v2.4</span>
+            <span className="flex items-center gap-1.5 text-[#1F513B] font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#1F513B] animate-pulse"></span>
+              Sistem Pengawasan Aktif
             </span>
           </div>
         </div>
